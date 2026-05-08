@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>PedasManis | Makanan Pedas & Minuman Segar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <div class="logo">
+        <h2>PedasManis <span>nampol!</span></h2>
+      </div>
+      <div class="nav-links">
+        <a href="#home">Beranda</a>
+        <a href="#best-seller">Best Seller</a>
+        <a href="#spesial">Menu Spesial</a>
+        <a href="#contact">Kontak</a>
+      </div>
+      <div class="cart-icon" id="cartIcon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="badge-disc">
+          <i class="fas fa-fire"></i> SPECIAL PEDAS PROMO
+        </div>
+        <h1>Makanan Pedas <br>& <span style="color:#e67e22;">Minuman Segar</span></h1>
+        <p>🔥 Sensasi pedas level up! Dari ayam geprek sambal naga, mie pedas Korea, hingga es kopi susu dan lemon tea yang menyegarkan. Dijamin bikin ketagihan!</p>
+        <div class="discount-code">
+          <span><i class="fas fa-gift"></i> Diskon 20%</span>
+          <span class="code">PEDASMANIS20</span>
+          <span style="font-size: 0.75rem;">min. beli 2 item</span>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="pedas.jpeg" alt="Makanan Pedas" onerror="this.src='https://placehold.co/400x400?text=Hero+Image'">
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Seller Section -->
+  <div class="container" id="best-seller">
+    <div class="section-title">
+      <h2>🔥 Best Seller & Terlaris</h2>
+      <p style="color:#7f5e40;">Pilihan favorit pelanggan setia kami</p>
+    </div>
+    <div class="menu-grid" id="bestSellerGrid"></div>
+  </div>
+
+  <!-- Menu Spesial Section -->
+  <div class="container" id="spesial">
+    <div class="section-title">
+      <h2>✨ Menu Spesial</h2>
+      <p>Rasa eksklusif dengan sentuhan modern</p>
+    </div>
+    <div class="menu-grid" id="specialGrid"></div>
+  </div>
+
+  <!-- Contact Section -->
+  <footer id="contact" class="contact-section">
+    <div class="container contact-container">
+      <div class="contact-info">
+        <h3><i class="fas fa-store"></i> PedasManis</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Jl. Bincarung No. 4, Tanah Sereal</p>
+        <p><i class="fas fa-clock"></i> Buka setiap hari: 10.00 - 22.00 WIB</p>
+        <p><i class="fas fa-envelope"></i> hello@pedasmanis.id</p>
+      </div>
+      <div class="contact-wa">
+        <h4>Pesan Sekarang via WhatsApp</h4>
+        <p>Klik tombol di bawah untuk memesan langsung</p>
+        <a href="https://wa.me/6285853784113?text=Halo%20PedasManis%2C%20saya%20mau%20pesan%20makanan%20pedas%20nih!" 
+           class="wa-button" target="_blank">
+          <i class="fab fa-whatsapp"></i> Chat via WhatsApp
+        </a>
+        <small class="wa-note">Nomor resmi: +62 858-5378-4113</small>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 PedasManis - nikmati pedasnya nagih, segarnya bikin ketagihan!</p>
+    </div>
+  </footer>
+
+  <!-- Modal Keranjang -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModalBtn">&times;</span>
+      <h3><i class="fas fa-shopping-bag"></i> Keranjang Pesanan</h3>
+      <div id="cartItemsList"></div>
+      <div class="cart-total">Total: <span id="cartTotalPrice">Rp 0</span></div>
+      <div class="cart-actions">
+        <button id="checkoutWaBtn" class="checkout-wa">Pesan via WA <i class="fab fa-whatsapp"></i></button>
+        <button id="clearCartBtn" class="clear-cart">Kosongkan</button>
+      </div>
+      <p class="discount-note">* Gunakan kode PEDASMANIS20 untuk diskon 20% (min. 2 item)</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
